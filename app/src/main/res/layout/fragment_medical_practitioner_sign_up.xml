@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4CAF50"
+    android:scrollbars="vertical"
+    android:verticalScrollbarPosition="right"
+    tools:context=".MedicalPractitionerSignUpFragment">
+
+    <TextView
+        android:id="@+id/medicalPractitionersOnly"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="center"
+        android:text="@string/signUpPage"
+        android:textColor="#01080E"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/medicalPractitionersOnly">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:verticalScrollbarPosition="defaultPosition">
+
+            <TextView
+                android:id="@+id/enterLastName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="30dp"
+                android:background="#FFFFFF"
+                android:hint="@string/enterLastName"
+                android:padding="5dp"
+                android:textColorHint="#01080E"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/enterFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:background="#FFFFFF"
+                android:hint="@string/enterFirstName"
+                android:padding="5dp"
+                android:shadowColor="#01080E"
+                android:textColorHint="#01080E"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/enterEmailAddressMedicalPractitioner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:autoText="true"
+                android:background="#FFFFFF"
+                android:backgroundTint="#FFFFFF"
+                android:ems="10"
+                android:hint="@string/enterEmailHere"
+                android:inputType="textEmailAddress"
+                android:padding="5dp"
+                android:textColor="#01080E"
+                android:textColorHint="#01080E"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/createPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:background="#FFFFFF"
+                android:backgroundTint="#FFFFFF"
+                android:ems="10"
+                android:hint="@string/createYourPassword"
+                android:inputType="textPassword"
+                android:padding="5dp"
+                android:textColorHint="#01080E"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/confirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:background="#FFFFFF"
+                android:backgroundTint="#FFFFFF"
+                android:ems="10"
+                android:hint="@string/confirmPassword"
+                android:inputType="textPassword"
+                android:padding="5dp"
+                android:textColorHint="#01080E"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/profession"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:background="#FFFFFF"
+                android:drawablePadding="2dp"
+                android:drawingCacheQuality="auto"
+                android:hint="@string/enterYourProfession"
+                android:includeFontPadding="false"
+                android:padding="5dp"
+                android:textColor="#01080E"
+                android:textColorHint="#01080E"
+                android:textSize="24sp"
+                android:textStyle="normal"
+                app:drawableEndCompat="@android:drawable/btn_dropdown" />
+
+            <TextView
+                android:id="@+id/displayProfessionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:background="#FFFFFF"
+                android:hint="@string/typeRegistrationNumberHere"
+                android:padding="5dp"
+                android:textColor="#01080E"
+                android:textColorHint="#01080E"
+                android:textSize="24sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.89"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/nextMedicalPractitionerSignUpButton"
+        android:textColor="#01080E"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline6" />
+
+    <Button
+        android:id="@+id/backMedicalPractitionerSignUpButton"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/backArrow"
+        android:textColor="#01080E"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline6" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/splashFragment"
+    tools:ignore="ExtraText">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.purple_butterfly.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.example.purple_butterfly.LogInFragment"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_log_in" >
+        <action
+            android:id="@+id/action_logInFragment_to_adminFragment"
+            app:destination="@id/adminFragment" />
+        <action
+            android:id="@+id/action_logInFragment_to_landingPageFragment"
+            app:destination="@id/landingPageFragment" />
+        <action
+            android:id="@+id/action_logInFragment_to_signUpOptionsFragment"
+            app:destination="@id/signUpOptionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminFragment"
+        android:name="com.example.purple_butterfly.AdminFragment"
+        android:label="fragment_admin"
+        tools:layout="@layout/fragment_admin" />
+    <fragment
+        android:id="@+id/landingPageFragment"
+        android:name="com.example.purple_butterfly.LandingPageFragment"
+        android:label="fragment_landing_page"
+        tools:layout="@layout/fragment_landing_page" >
+        <action
+            android:id="@+id/action_landingPageFragment_to_occupationalTherapistFragment"
+            app:destination="@id/occupationalTherapistFragment" />
+        <action
+            android:id="@+id/action_landingPageFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_landingPageFragment_to_physiotherapistFragment"
+            app:destination="@id/physiotherapistFragment" />
+        <action
+            android:id="@+id/action_landingPageFragment_to_speechtherapistFragment"
+            app:destination="@id/speechtherapistFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpOptionsFragment"
+        android:name="com.example.purple_butterfly.SignUpOptionsFragment"
+        android:label="fragment_sign_up_options"
+        tools:layout="@layout/fragment_sign_up_options" >
+        <action
+            android:id="@+id/action_signUpOptionsFragment_to_therapistSignUpFragment"
+            app:destination="@id/therapistSignUpFragment" />
+        <action
+            android:id="@+id/action_signUpOptionsFragment_to_nonMedicalPractitionerSignUpFragment"
+            app:destination="@id/nonMedicalPractitionerSignUpFragment" />
+        <action
+            android:id="@+id/action_signUpOptionsFragment_to_organizationSignUpFragment"
+            app:destination="@id/organizationSignUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/therapistSignUpFragment"
+        android:name="com.example.purple_butterfly.MedicalPractitionerSignUpFragment"
+        android:label="fragment_therapist_sign_up"
+        tools:layout="@layout/fragment_medical_practitioner_sign_up" >
+        <action
+            android:id="@+id/action_therapistSignUpFragment_to_medicalPractitionerProfileFragment2"
+            app:destination="@id/medicalPractitionerProfileFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/nonMedicalPractitionerSignUpFragment"
+        android:name="com.example.purple_butterfly.NonMedicalPractitionerSignUpFragment"
+        android:label="fragment_non_medical_practitioner_sign_up"
+        tools:layout="@layout/fragment_non_medical_practitioner_sign_up" />
+    <fragment
+        android:id="@+id/organisationProfileFragment"
+        android:name="com.example.purple_butterfly.OrganisationProfileFragment"
+        android:label="fragment_organisation_profile"
+        tools:layout="@layout/fragment_organisation_profile" />
+    <fragment
+        android:id="@+id/organizationSignUpFragment"
+        android:name="com.example.purple_butterfly.OrganizationSignUpFragment"
+        android:label="fragment_organization_sign_up"
+        tools:layout="@layout/fragment_organization_sign_up" >
+        <action
+            android:id="@+id/action_organizationSignUpFragment_to_organisationProfileFragment"
+            app:destination="@id/organisationProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/occupationalTherapistFragment"
+        android:name="com.example.purple_butterfly.OccupationalTherapistFragment"
+        android:label="OccupationalTherapistFragment" />
+        tools:layout="@layout/fragment_occupational_therapist" />
+    <fragment
+        android:id="@+id/medicalPractitionerProfileFragment2"
+        android:name="com.example.purple_butterfly.MedicalPractitionerProfileFragment"
+        android:label="fragment_medical_practitioner_profile"
+        tools:layout="@layout/fragment_medical_practitioner_profile" >
+        <action
+            android:id="@+id/action_medicalPractitionerProfileFragment2_to_landingPageFragment"
+            app:destination="@id/landingPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.purple_butterfly.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/physiotherapistFragment"
+        android:name="com.example.purple_butterfly.PhysiotherapistFragment"
+        android:label="fragment_physiotherapist"
+        tools:layout="@layout/fragment_physiotherapist" />
+    <fragment
+        android:id="@+id/speechtherapistFragment"
+        android:name="com.example.purple_butterfly.SpeechtherapistFragment"
+        android:label="fragment_speechtherapist"
+        tools:layout="@layout/fragment_speechtherapist" />
+</navigation>
